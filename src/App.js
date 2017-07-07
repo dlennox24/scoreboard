@@ -11,10 +11,14 @@ import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 
 import Header from './Header';
-import Round from './Round';
+import Hands from './Hands';
+import cardsImage from './assets/images/cards.jpg';
 
 const styleSheet = createStyleSheet('App', {
   root: {},
+  headerImg: {
+    width: '100%',
+  },
   mainContent: {
     margin: '30px auto',
     width: '75%',
@@ -26,21 +30,6 @@ const styleSheet = createStyleSheet('App', {
   gridHeader: {
     fontWeight: 'bold',
   },
-  score1: {
-    textAlign: 'right',
-  },
-  score2: {
-    textAlign: 'left',
-  },
-  roundBid: {
-    textAlign: 'center',
-  },
-  meld1: {
-    textAlign: 'left',
-  },
-  meld2: {
-    textAlign: 'right',
-  },
   row: {
     padding: '20px 0',
   },
@@ -49,12 +38,12 @@ const styleSheet = createStyleSheet('App', {
   },
 });
 
-let round = 0;
+let hand = 0;
 
 function createData(bid, bidWinner, change1, score1, meld1, change2, score2, meld2) {
-  round += 1;
+  hand += 1;
   return {
-    round,
+    hand,
     bid,
     bidWinner,
     score1,
@@ -70,7 +59,7 @@ const data = [
   createData(200, 1, -450, -350, 10, +300, 1050, 250),
   createData(350, 2, +300, 1050, 250, +500, 200, 75),
   createData(420, 2, -150, 780, 150, -450, -350, 10),
-  createData(170, 1, +500, 200, 75, +300, 1050, 250)
+  createData(480, 1, +500, 200, -1, +300, 1050, 250),
 ];
 
 class App extends Component {
@@ -79,31 +68,32 @@ class App extends Component {
     return (
       <div className={classes.root}>
         <Header />
+        <img className={classes.headerImg} src={cardsImage} alt='Table with playing cards'/>
         <main className={classes.mainContent}>
           <div className={classes.row+' row text-center'}>
             <div className='col-md-5'>
               <Paper className={classes.teamContainer}>
-                <Typography type='display2'>
-                  Team 1
+                <Typography type='display1'>
+                  Player 1
                 </Typography>
               </Paper>
             </div>
             <div className='col-md-2'>
-              <Typography  className={classes.teamContainer} type='display1'>
+              <Typography  className={classes.teamContainer} type='title'>
                 VS
               </Typography>
             </div>
             <div className='col-md-5'>
               <Paper className={classes.teamContainer}>
-                <Typography type='display2'>
-                  Team 2
+                <Typography type='display1'>
+                  Player 2
                 </Typography>
               </Paper>
             </div>
           </div>
           <Divider/>
           {data.slice(0).reverse().map((round,i) => {
-            return <Round key={i} data={round} />
+            return <Hands key={i} data={round} />
           })}
         </main>
         <br/>
