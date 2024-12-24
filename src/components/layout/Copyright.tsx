@@ -9,9 +9,10 @@ export default function Copyright(props: TypographyProps) {
       {...props}
       sx={[
         {
+          marginBottom: 2,
           color: 'text.secondary',
         },
-        ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
+        // ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
       ]}
     >
       {'Copyright © MIT '}
