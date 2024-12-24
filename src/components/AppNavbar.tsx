@@ -1,16 +1,16 @@
-import ColorModeIconDropdown from '@/theme/ColorModeIconDropdown';
-import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
-import { tabsClasses } from '@mui/material/Tabs';
 import MuiToolbar from '@mui/material/Toolbar';
+import { tabsClasses } from '@mui/material/Tabs';
 import Typography from '@mui/material/Typography';
-import * as React from 'react';
-import MenuButton from './layout/sidebar/MenuButton';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import SideMenuMobile from './SideMenuMobile';
+import MenuButton from './MenuButton';
+import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
 
 const Toolbar = styled(MuiToolbar)({
   width: '100%',
@@ -64,11 +64,7 @@ export default function AppNavbar() {
             sx={{ justifyContent: 'center', mr: 'auto' }}
           >
             <CustomIcon />
-            <Typography
-              variant="h4"
-              component="h1"
-              sx={{ color: 'text.primary' }}
-            >
+            <Typography variant="h4" component="h1" sx={{ color: 'text.primary' }}>
               Dashboard
             </Typography>
           </Stack>

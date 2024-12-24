@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Link from '@mui/material/Link';
 import Typography, { TypographyProps } from '@mui/material/Typography';
 
@@ -14,12 +15,9 @@ export default function Copyright(props: TypographyProps) {
         ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
       ]}
     >
-      {'Copyright © MIT '}
-      <Link
-        color="inherit"
-        href="https://github.com/dlennox24/scoreboard/blob/master/LICENSE.md"
-      >
-        Daniel Lennox
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Sitemark
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

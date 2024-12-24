@@ -1,5 +1,4 @@
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
-import { AppBar } from '@mui/material';
 import Breadcrumbs, { breadcrumbsClasses } from '@mui/material/Breadcrumbs';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -17,19 +16,17 @@ const StyledBreadcrumbs = styled(Breadcrumbs)(({ theme }) => ({
 
 export default function NavbarBreadcrumbs() {
   return (
-    <AppBar position="static">
-      <StyledBreadcrumbs
-        aria-label="breadcrumb"
-        separator={<NavigateNextRoundedIcon fontSize="small" />}
+    <StyledBreadcrumbs
+      aria-label="breadcrumb"
+      separator={<NavigateNextRoundedIcon fontSize="small" />}
+    >
+      <Typography variant="body1">Dashboard</Typography>
+      <Typography
+        variant="body1"
+        sx={{ color: 'text.primary', fontWeight: 600 }}
       >
-        <Typography variant="body1">Dashboard</Typography>
-        <Typography
-          variant="body1"
-          sx={{ color: 'text.primary', fontWeight: 600 }}
-        >
-          Home
-        </Typography>
-      </StyledBreadcrumbs>
-    </AppBar>
+        Home
+      </Typography>
+    </StyledBreadcrumbs>
   );
 }

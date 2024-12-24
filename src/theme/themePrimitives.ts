@@ -1,4 +1,4 @@
-import { alpha, createTheme, PaletteMode, Shadows } from '@mui/material/styles';
+import { createTheme, alpha, PaletteMode, Shadows } from '@mui/material/styles';
 
 declare module '@mui/material/Paper' {
   interface PaperPropsVariantOverrides {
@@ -18,6 +18,9 @@ declare module '@mui/material/styles/createPalette' {
     800: string;
     900: string;
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  interface PaletteColor extends ColorRange {}
 
   interface Palette {
     baseShadow: string;

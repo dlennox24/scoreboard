@@ -1,8 +1,9 @@
-import { gray } from '@/theme/themePrimitives';
 import { Theme } from '@mui/material/styles';
 import { axisClasses, chartsGridClasses, legendClasses } from '@mui/x-charts';
 import type { ChartsComponents } from '@mui/x-charts/themeAugmentation';
+import { gray } from '../.././theme/themePrimitives';
 
+/* eslint-disable import/prefer-default-export */
 export const chartsCustomizations: ChartsComponents<Theme> = {
   MuiChartsAxis: {
     styleOverrides: {
