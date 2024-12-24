@@ -1,18 +1,17 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Chip from '@mui/material/Chip';
-import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import { BarChart } from '@mui/x-charts/BarChart';
 import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import { BarChart } from '@mui/x-charts/BarChart';
 
 export default function PageViewsBarChart() {
   const theme = useTheme();
   const colorPalette = [
-    (theme.vars || theme).palette.primary.dark,
-    (theme.vars || theme).palette.primary.main,
-    (theme.vars || theme).palette.primary.light,
+    theme.palette.primary.dark,
+    theme.palette.primary.main,
+    theme.palette.primary.light,
   ];
   return (
     <Card variant="outlined" sx={{ width: '100%' }}>
@@ -48,6 +47,7 @@ export default function PageViewsBarChart() {
                 categoryGapRatio: 0.5,
                 data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
               },
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ] as any
           }
           series={[

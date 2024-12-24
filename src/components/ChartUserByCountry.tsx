@@ -1,19 +1,21 @@
-import * as React from 'react';
-import { PieChart } from '@mui/x-charts/PieChart';
-import { useDrawingArea } from '@mui/x-charts/hooks';
-import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Box from '@mui/material/Box';
+import LinearProgress, {
+  linearProgressClasses,
+} from '@mui/material/LinearProgress';
 import Stack from '@mui/material/Stack';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import { useDrawingArea } from '@mui/x-charts/hooks';
+import { PieChart } from '@mui/x-charts/PieChart';
+import * as React from 'react';
 
 import {
-  IndiaFlag,
-  UsaFlag,
   BrazilFlag,
   GlobeFlag,
+  IndiaFlag,
+  UsaFlag,
 } from '../internals/components/CustomIcons';
 
 const data = [
@@ -59,7 +61,7 @@ const StyledText = styled('text', {
 })<StyledTextProps>(({ theme }) => ({
   textAnchor: 'middle',
   dominantBaseline: 'central',
-  fill: (theme.vars || theme).palette.text.secondary,
+  fill: theme.palette.text.secondary,
   variants: [
     {
       props: {

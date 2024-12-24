@@ -1,17 +1,11 @@
-import * as React from 'react';
-import clsx from 'clsx';
-import { animated, useSpring } from '@react-spring/web';
-import { TransitionProps } from '@mui/material/transitions';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Collapse from '@mui/material/Collapse';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+import { TransitionProps } from '@mui/material/transitions';
 import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
-import {
-  unstable_useTreeItem2 as useTreeItem2,
-  UseTreeItem2Parameters,
-} from '@mui/x-tree-view/useTreeItem2';
 import {
   TreeItem2Content,
   TreeItem2IconContainer,
@@ -21,7 +15,13 @@ import {
 import { TreeItem2Icon } from '@mui/x-tree-view/TreeItem2Icon';
 import { TreeItem2Provider } from '@mui/x-tree-view/TreeItem2Provider';
 import { TreeViewBaseItem } from '@mui/x-tree-view/models';
-import { useTheme } from '@mui/material/styles';
+import {
+  unstable_useTreeItem2 as useTreeItem2,
+  UseTreeItem2Parameters,
+} from '@mui/x-tree-view/useTreeItem2';
+import { animated, useSpring } from '@react-spring/web';
+import clsx from 'clsx';
+import * as React from 'react';
 
 type Color = 'blue' | 'green';
 
@@ -102,11 +102,17 @@ interface CustomLabelProps {
   expandable?: boolean;
 }
 
-function CustomLabel({ color, expandable, children, ...other }: CustomLabelProps) {
+function CustomLabel({
+  color,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  expandable,
+  children,
+  ...other
+}: CustomLabelProps) {
   const theme = useTheme();
   const colors = {
-    blue: (theme.vars || theme).palette.primary.main,
-    green: (theme.vars || theme).palette.success.main,
+    blue: theme.palette.primary.main,
+    green: theme.palette.success.main,
   };
 
   const iconColor = color ? colors[color] : null;
