@@ -14,9 +14,12 @@ export default function Copyright(props: TypographyProps) {
         ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
       ]}
     >
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Sitemark
+      {'Copyright © MIT '}
+      <Link
+        color="inherit"
+        href="https://github.com/dlennox24/scoreboard/blob/master/LICENSE.md"
+      >
+        Daniel Lennox
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

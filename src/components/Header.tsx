@@ -1,7 +1,7 @@
 import ColorModeIconDropdown from '@/theme/ColorModeIconDropdown';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import Stack from '@mui/material/Stack';
-import MenuButton from './MenuButton';
+import MenuButton from './layout/sidebar/MenuButton';
 import NavbarBreadcrumbs from './NavbarBreadcrumbs';
 
 import Search from './Search';

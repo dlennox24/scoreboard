@@ -1,13 +1,9 @@
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import MuiDrawer, { drawerClasses } from '@mui/material/Drawer';
-import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+import SelectContent from '../../SelectContent';
 import MenuContent from './MenuContent';
-import OptionsMenu from './OptionsMenu';
-import SelectContent from './SelectContent';
 
 const drawerWidth = 240;
 
@@ -44,7 +40,7 @@ export default function SideMenu() {
       </Box>
       <Divider />
       <MenuContent />
-      <Stack
+      {/* <Stack
         direction="row"
         sx={{
           p: 2,
@@ -72,7 +68,7 @@ export default function SideMenu() {
           </Typography>
         </Box>
         <OptionsMenu />
-      </Stack>
+      </Stack> */}
     </Drawer>
   );
 }

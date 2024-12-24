@@ -9,7 +9,7 @@ import MuiMenuItem from '@mui/material/MenuItem';
 import { paperClasses } from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
-import MenuButton from './MenuButton';
+import MenuButton from './layout/sidebar/MenuButton';
 
 const MenuItem = styled(MuiMenuItem)({
   margin: '2px 0',

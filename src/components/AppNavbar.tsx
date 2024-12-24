@@ -9,7 +9,7 @@ import { tabsClasses } from '@mui/material/Tabs';
 import MuiToolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import MenuButton from './MenuButton';
+import MenuButton from './layout/sidebar/MenuButton';
 import SideMenuMobile from './SideMenuMobile';
 
 const Toolbar = styled(MuiToolbar)({

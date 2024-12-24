@@ -8,8 +8,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import CardAlert from './CardAlert';
-import MenuButton from './MenuButton';
-import MenuContent from './MenuContent';
+import MenuButton from './layout/sidebar/MenuButton';
+import MenuContent from './layout/sidebar/MenuContent';
 
 interface SideMenuMobileProps {
   open: boolean | undefined;

@@ -1,7 +1,7 @@
 import AppNavbar from '@/components/AppNavbar';
 import Header from '@/components/Header';
+import SideMenu from '@/components/layout/sidebar/SideMenu';
 import MainGrid from '@/components/MainGrid';
-import SideMenu from '@/components/SideMenu';
 import AppTheme from '@/theme/AppTheme';
 import {
   chartsCustomizations,
@@ -47,7 +47,13 @@ export default function Dashboard(props: { disableCustomTheme?: boolean }) {
             }}
           >
             <Header />
-            <MainGrid />
+            <Box
+              sx={{
+                mx: 3,
+              }}
+            >
+              <MainGrid />
+            </Box>
           </Stack>
         </Box>
       </Box>

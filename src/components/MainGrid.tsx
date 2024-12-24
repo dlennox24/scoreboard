@@ -1,8 +1,9 @@
+import FiveCrownsScoreboard from '@/games/FiveCrowns/Scoreboard';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
-import Copyright from './Copyright';
 import HighlightedCard from './HighlightedCard';
+import Copyright from './layout/Copyright';
 import SessionsChart from './SessionsChart';
 import StatCard, { StatCardProps } from './StatCard';
 
@@ -43,6 +44,7 @@ const data: StatCardProps[] = [
 export default function MainGrid() {
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px' } }}>
+      <FiveCrownsScoreboard />
       {/* cards */}
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
         Overview
