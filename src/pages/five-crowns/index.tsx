@@ -1,7 +1,6 @@
 import LayoutScoreboard from '@/layouts/Scoreboard.layout';
 import { MilitaryTech } from '@mui/icons-material';
 import { Alert, Chip, Stack, Typography } from '@mui/material';
-import { amber } from '@mui/material/colors';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -48,12 +47,12 @@ const rowHeaders: readonly RowHeader[] = [
   { id: '13', label: 'King' },
 ];
 
-const placesStyles = [
-  {
-    chip: { borderColor: amber[500] },
-    icon: { color: amber[500] },
-  },
-];
+// const placesStyles = [
+//   {
+//     chip: { borderColor: amber[500] },
+//     icon: { color: amber[500] },
+//   },
+// ];
 
 export default function HomePage() {
   const [scores, setScores] = React.useState(
@@ -121,7 +120,8 @@ export default function HomePage() {
     setPlaces(calcPlaces());
   };
 
-  const handleUpdatePlayer = (event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleUpdatePlayer = (event: { target: { value: any; id: any } }) => {
     const {
       target: { value, id },
     } = event;
