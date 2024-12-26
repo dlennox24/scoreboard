@@ -24,13 +24,13 @@ interface RowHeader {
 }
 
 const columnHeaders: readonly Column[] = [
-  { id: '1', label: 'Player 1', minWidth: 100 },
-  { id: '2', label: 'Player 2', minWidth: 100 },
-  { id: '3', label: 'Player 3', minWidth: 100 },
-  { id: '4', label: 'Player 4', minWidth: 100 },
-  { id: '5', label: 'Player 5', minWidth: 100 },
-  { id: '6', label: 'Player 6', minWidth: 100 },
-  { id: '7', label: 'Player 7', minWidth: 100 },
+  { id: '1', label: 'Player 1', minWidth: 125 },
+  { id: '2', label: 'Player 2', minWidth: 125 },
+  { id: '3', label: 'Player 3', minWidth: 125 },
+  { id: '4', label: 'Player 4', minWidth: 125 },
+  { id: '5', label: 'Player 5', minWidth: 125 },
+  { id: '6', label: 'Player 6', minWidth: 125 },
+  { id: '7', label: 'Player 7', minWidth: 125 },
 ];
 
 const rowHeaders: readonly RowHeader[] = [
@@ -143,9 +143,12 @@ export default function HomePage() {
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
-                <TableCell align="center">Rounds</TableCell>
+                <TableCell align="center"></TableCell>
                 {columnHeaders.map((columnHeader, i) => (
-                  <TableCell key={columnHeader.id}>
+                  <TableCell
+                    key={columnHeader.id}
+                    sx={{ minWidth: columnHeader.minWidth }}
+                  >
                     <Stack>
                       <TextField
                         id={`nameField-${i}`}
