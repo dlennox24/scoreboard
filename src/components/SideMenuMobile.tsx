@@ -1,23 +1,22 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 
 import MenuButton from './MenuButton';
 import MenuContent from './MenuContent';
-import CardAlert from './CardAlert';
 
 interface SideMenuMobileProps {
   open: boolean | undefined;
   toggleDrawer: (newOpen: boolean) => () => void;
 }
 
-export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobileProps) {
+export default function SideMenuMobile({
+  open,
+  toggleDrawer,
+}: SideMenuMobileProps) {
   return (
     <Drawer
       anchor="right"
@@ -38,7 +37,7 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
         }}
       >
         <Stack direction="row" sx={{ p: 2, pb: 0, gap: 1 }}>
-          <Stack
+          {/* <Stack
             direction="row"
             sx={{ gap: 1, alignItems: 'center', flexGrow: 1, p: 1 }}
           >
@@ -51,7 +50,7 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
             <Typography component="p" variant="h6">
               Riley Carter
             </Typography>
-          </Stack>
+          </Stack> */}
           <MenuButton showBadge>
             <NotificationsRoundedIcon />
           </MenuButton>
@@ -61,9 +60,12 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
           <MenuContent />
           <Divider />
         </Stack>
-        <CardAlert />
         <Stack sx={{ p: 2 }}>
-          <Button variant="outlined" fullWidth startIcon={<LogoutRoundedIcon />}>
+          <Button
+            variant="outlined"
+            fullWidth
+            startIcon={<LogoutRoundedIcon />}
+          >
             Logout
           </Button>
         </Stack>
