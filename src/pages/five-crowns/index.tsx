@@ -31,6 +31,7 @@ const columnHeaders: readonly Column[] = [
   { id: '5', label: 'Player 5', minWidth: 125 },
   { id: '6', label: 'Player 6', minWidth: 125 },
   { id: '7', label: 'Player 7', minWidth: 125 },
+  { id: '8', label: 'Player 8', minWidth: 125 },
 ];
 
 const rowHeaders: readonly RowHeader[] = [
